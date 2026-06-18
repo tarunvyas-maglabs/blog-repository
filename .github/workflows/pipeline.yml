@@ -21,6 +21,8 @@ jobs:
         run: npm run lint --prefix client
       - name: Test backend
         run: npm run test --prefix server
+        env:
+          TEST_MONGODB_URI: ${{ secrets.TEST_MONGODB_URI }}
       - name: Test frontend
         run: npm run test --prefix client
       - name: Build 
