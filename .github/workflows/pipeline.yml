@@ -1,0 +1,22 @@
+name: Deployment pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build_and_test:
+  runs-on: ubuntu-latest
+  steps:
+    - uses: actions/checkout@v6
+    - uses: actions/setup-node@v6
+      with: 
+        node-version: '24'
+    - name: Install dependencies
+      run: npm run install:all
+    - name: Lint Frontend
+      run: npm run lint --prefix frontend
+    - name: Lint Backend
+      run: npm run lint --prefix backend
+
