@@ -32,4 +32,6 @@ jobs:
         run: npx playwright install --with-deps
       - name: Run Playwright tests
         run: npm run test:e2e
+        env:
+          MONGODB_URI: ${{ secrets.MONGODB_URI }}
 
