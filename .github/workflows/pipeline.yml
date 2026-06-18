@@ -15,8 +15,8 @@ jobs:
           node-version: '24'
       - name: Install dependencies
         run: npm run install:all
-      - name: Lint Frontend
-        run: npm run lint --prefix frontend
-      - name: Lint Backend
-        run: npm run lint --prefix backend
+      - name: Lint backend
+        run: npm run lint --prefix server
+      - name: Lint frontend
+        run: npm run lint --prefix client
 
