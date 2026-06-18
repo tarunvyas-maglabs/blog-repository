@@ -23,6 +23,7 @@ jobs:
         run: npm run test --prefix server
         env:
           TEST_MONGODB_URI: ${{ secrets.TEST_MONGODB_URI }}
+          SECRET: ${{ secrets.SECRET }}
       - name: Test frontend
         run: npm run test --prefix client
       - name: Build 
