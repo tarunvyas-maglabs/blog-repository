@@ -66,7 +66,9 @@ export default defineConfig({
     {
       command: 'npm run dev --prefix server',
       url: 'http://localhost:3003/api/blogs',
-      name: 'Backend'
+      name: 'Backend',
+      stdout: 'pipe',
+      stderr: 'pipe',
     },
     {
       command: 'npm run dev --prefix client',
