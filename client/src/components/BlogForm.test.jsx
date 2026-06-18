@@ -12,7 +12,7 @@ vi.mock('../store', () => ({
   useNotificationActions: () => ({ setNotification })
 }))
 
-test.only('calls the event handler it received as props with the right details when a new blog is created', async () => {
+test('calls the event handler it received as props with the right details when a new blog is created', async () => {
   const user = userEvent.setup()
 
   render(

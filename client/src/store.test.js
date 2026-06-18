@@ -21,7 +21,7 @@ beforeEach(() => {
 })
 
 describe('useBlogActions', () => {
-  it.only('initialize loads blogs from service', async () => {
+  it('initialize loads blogs from service', async () => {
     const mockBlogs = [{
       id: 1,
       title: 'Clean code is required',
