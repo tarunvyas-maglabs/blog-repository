@@ -87,3 +87,4 @@ jobs:
         with:
           webhook: ${{ secrets.DISCORD_WEBHOOK }}
           title: "❌ **Build Failed!** The pipeline encountered an error"
+          color: 0xff0000
