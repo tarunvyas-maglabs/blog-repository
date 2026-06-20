@@ -76,6 +76,7 @@ jobs:
         with:
           webhook: ${{ secrets.DISCORD_WEBHOOK }}
           title: "✅ **Deployment Successful!** A new version deployed to production"
+          color: 0x008000
   
   notify_failure:
     needs: [build_and_test, deploy, tag_release]
